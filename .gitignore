@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local site packaging
+.site-stage/
+rolls-site.tar.gz
+update-app.mjs
