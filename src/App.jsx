@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useRef, useState } from 'react'
 import Cart from './Cart.jsx'
+import BurgerAssembly from './BurgerAssembly.jsx'
 import { cartReducer, restoreCart } from './cart.js'
 import './App.css'
 const instagram = 'https://www.instagram.com/rollsandmoreofficial/'
@@ -61,9 +62,7 @@ function App(){
    <div className="exploded" role="img" aria-label="Bun, lettuce, cheese, beef patties and bottom bun come together through a lively sauce splash as you scroll">
     <div className="sauce-splash" aria-hidden="true"><svg viewBox="0 0 600 600"><path d="M97 407C33 319 93 205 207 183c95-18 123-93 199-62 65 26 36 111 100 154 81 55 50 175-49 194-80 15-133-50-204-24-58 22-116 18-156-38Z"/><circle cx="83" cy="198" r="23"/><circle cx="491" cy="141" r="15"/><circle cx="535" cy="395" r="25"/><circle cx="167" cy="94" r="12"/></svg></div>
     <div className="flavour-burst" aria-hidden="true">{Array.from({length:8},(_,i)=><span key={i}/>)}</div>
-    {[0,1,2,3,4].map((n)=><div key={n} className={`ingredient ingredient-${n}`}><img src="/images/layers.png" alt="" loading="lazy"/></div>)}
-    <img className="mobile-burger mobile-burger-exploded" src="/images/layers.png" alt="" aria-hidden="true"/>
-    <img className="mobile-burger mobile-burger-stacked" src="/images/burger.png" alt="" aria-hidden="true"/>
+    <BurgerAssembly/>
     <span className="stacked-stamp" aria-hidden="true">STACKED<br/>RIGHT</span>
    </div>
    <span className="layer-note">THE ANATOMY OF A GOOD BITE.</span>
